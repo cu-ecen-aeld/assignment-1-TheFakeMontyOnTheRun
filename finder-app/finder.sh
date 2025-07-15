@@ -19,5 +19,5 @@ total="$(find "$1" | wc -l)"
 matched="$(grep -rI "$2" "$1" | wc -l)"
 
 
-echo "The number of files are $total and the number of matching lines are $matched"
+echo "The number of files are $((total - 1)) and the number of matching lines are $matched"
 
