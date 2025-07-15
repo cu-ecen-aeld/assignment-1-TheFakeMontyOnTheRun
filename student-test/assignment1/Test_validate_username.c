@@ -1,3 +1,4 @@
+
 #include "unity.h"
 #include <stdbool.h>
 #include <stdlib.h>
@@ -19,4 +20,6 @@ void test_validate_my_username()
   const char *mallocedUsername = malloc_username_from_conf_file();
 
   TEST_ASSERT_EQUAL_STRING_MESSAGE(username, mallocedUsername, "user names don't match!");
+
+  free((char*)mallocedUsername);
 }
